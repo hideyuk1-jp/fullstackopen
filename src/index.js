@@ -1,15 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import ReactDOM from "react-dom";
 
-const App = props => {
-  const [counter, setCounter] = useState(0);
-
-  return (
-    <>
-      <div>{counter}</div>
-      <button onClick={setCounter(counter + 1)}>plus</button>
-    </>
-  );
+const App = () => {
+  return <div>Hello</div>;
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
