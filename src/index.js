@@ -6,15 +6,14 @@ const Button = props => (
   <button onClick={props.handleClick}>{props.text}</button>
 );
 
+const Display = props => <div>{props.value}</div>;
+
 const App = props => {
   const [value, setValue] = useState(10);
 
   const setToValue = newValue => {
     setValue(newValue);
   };
-
-  // Do not define components inside another component
-  const Display = props => <div>{props.value}</div>;
 
   return (
     <div>
