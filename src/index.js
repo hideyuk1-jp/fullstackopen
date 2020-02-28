@@ -9,6 +9,8 @@ const History = props => {
   return <div>button press history: {props.allClicks.join(" ")}</div>;
 };
 
+const Button = ({ onClick, text }) => <button onClick={onClick}>{text}</button>;
+
 const App = props => {
   const [left, setLeft] = useState(0);
   const [right, setRight] = useState(0);
@@ -28,8 +30,8 @@ const App = props => {
     <div>
       <div>
         {left}
-        <button onClick={handleLeftClick}>left</button>
-        <button onClick={handleRightClick}>right</button>
+        <Button onClick={handleLeftClick} text="left" />
+        <Button onClick={handleRightClick} text="right" />
         {right}
         <History allClicks={allClicks} />
       </div>
